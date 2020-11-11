@@ -6,30 +6,21 @@ const { src, dest, parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 // Подключаем gulp-concat
 const concat = require('gulp-concat');
- 
-// Подключаем gulp-uglify-es
+ // Подключаем gulp-uglify-es
 const uglify = require('gulp-uglify-es').default;
 // Подключаем модули gulp-sass и gulp-less
 const sass = require('gulp-sass');
 const less = require('gulp-less');
- 
 // Подключаем Autoprefixer
 const autoprefixer = require('gulp-autoprefixer');
  
 // Подключаем модуль gulp-clean-css
 const cleancss = require('gulp-clean-css');
-// Подключаем gulp-imagemin для работы с изображениями
-const imagemin = require('gulp-imagemin');
- 
-// Подключаем модуль gulp-newer
-const newer = require('gulp-newer');
- 
-// Подключаем модуль del
-const del = require('del');
+
 // Определяем логику работы Browsersync
 function browsersync() {
 	browserSync.init({ // Инициализация Browsersync
-		server: { baseDir: 'app/' }, // Указываем папку сервера
+		proxy: 'SiteBaton', // Указываем папку сервера
 		notify: false, // Отключаем уведомления
 		online: true // Режим работы: true или false
 	})
@@ -53,26 +44,15 @@ function styles() {
 	.pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
-function images() {
-	return src('app/images/src/**/*') // Берём все изображения из папки источника
-	.pipe(newer('app/images/dest/')) // Проверяем, было ли изменено (сжато) изображение ранее
-	.pipe(imagemin()) // Сжимаем и оптимизируем изображеня
-	.pipe(dest('app/images/dest/')) // Выгружаем оптимизированные изображения в папку назначения
-}
-function cleanimg() {
-	return del('app/images/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
-}
 function startwatch() {
  
 	// Выбираем все файлы JS в проекте, а затем исключим с суффиксом .min.js
 	watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
-		// Мониторим файлы препроцессора на изменения
+	// Мониторим файлы препроцессора на изменения
 	watch('app/**/' + preprocessor + '/**/*', styles);
-	// Мониторим файлы HTML на изменения
+		// Мониторим файлы HTML на изменения
 	watch('app/**/*.html').on('change', browserSync.reload);
-	// Мониторим папку-источник изображений и выполняем images(), если есть изменения
-	watch('app/images/src/**/*', images);
- 
+	watch('app/**/*.php').on('change', browserSync.reload);
  
 }
 // Экспортируем функцию browsersync() как таск browsersync. Значение после знака = это имеющаяся функция.
@@ -81,7 +61,5 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 // Экспортируем функцию styles() в таск styles
 exports.styles = styles;
-// Экспорт функции images() в таск images
-exports.images = images;
 // Экспортируем дефолтный таск с нужным набором функций
 exports.default = parallel(styles, scripts, browsersync, startwatch);
