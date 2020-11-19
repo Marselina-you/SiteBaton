@@ -1,39 +1,76 @@
 body
 	background-color: #FFF8DC
-	//general style
+//general style
 .container-fluid
 	padding: 0
+$color1: rgba(219, 218, 196, 0.7)
+$color2: rgba(77, 72, 60, 0.7)
+$color3: rgb(191, 226, 230)
+$color4: rgb(243, 245, 247)
+$color5: rgb(219, 218, 196)
+$color6: rgb(62, 142, 78)
+$color7: rgb(251, 246, 202);
+.backgroud3
+    background-color: $color3
+.backgroud4
+    background-color: $color4
+.backgroud5
+    background-color: $color5
+.backgroud1
+    background-color: $color1
+.backgroud6
+    background-color: $color6
+
+.photoProductImg
+    img
+        min-width: 100%
+        height: auto
+h3
+    padding-top: 1.25em
 .browncolor
-	color: #8B7355
+    color: #1f1206
+.greencolor
+    color: $color6
+.size48px
+    font-size: 3em
 .darkbrowncolor
-	color: #351E10
+    color: #351E10
 .bardcolor
-	color:#A52A2A
+    color:#A52A2A
 .lightbrowncolor
-	color:#8B7355
+    color:#8B7355
 .whitecolor
-	color: white
-.fonttextSegoeScript
-	font-family: "Segoe Script"
+    color: white
+.fontSegoeScript
+    font-family: "Segoe Script"
 .fontTahoma
-	font-family: "Tahoma"
+    font-family: "Tahoma"
 .fontSans
-	font-family: "Microsoft Sans Serif"
+    font-family: "Microsoft Sans Serif"
 .size45px
-	font-size: 2.75em
+    font-size: 2.75em
 .size35px
-	font-size: 2.2em
+    font-size: 2.2em
 .size32px
-	font-size: 2em
+    font-size: 2em
 .size29px
-	font-size: 1.8em
+    font-size: 1.8em
 .size26px
-	font-size: 1.6em
+    font-size: 1.6em
+.size22px
+    font-size: 1.4em
 .size24px
-	font-size: 1.5em
+    font-size: 1.5em
+.size20px
+    font-size: 1.25em
+.padding-15
+    padding: 10px
 
 
-	//footer
+
+
+
+//footer
 .container-footer
 	padding: 0
 .wrap-footer-block
@@ -44,7 +81,7 @@ body
 	padding: 30px
 .icon
 	padding: 5px
-	//page
+//page
 .container-page-title
 	padding: 0
 	height: 760px
@@ -71,7 +108,7 @@ body
 	height: 50px
 .page-title-content__meaning
 	margin-top: 15px
-	//block-products
+//block-products
 .container-block-product
 	padding: 2.45em
 .wrap-block-product
@@ -96,7 +133,7 @@ body
 .block-product__name, .block-product__description 
 	a:hover
 	    color:#86451e
-/*Action*/ 
+//Action 
 .content-action_title
     padding: 15px
     border-bottom: 2px solid #351E10
@@ -146,7 +183,7 @@ body
     color: #fff 
     text-shadow: none
 
-/*Pull-out-menu*/
+//Pull-out-menu
 .menu
     position: fixed
     top: 0px
@@ -175,7 +212,7 @@ body
     margin-left: 250px
     cursor: pointer
     
-    //aboutUs
+//aboutUs
 .container-aboutUs
     padding: 30px
 .wrap-container-aboutUs_block2
@@ -185,6 +222,30 @@ body
     padding: 50px 0 80px 0
 .container-aboutUs_block1_img
     padding: 10px
+//add
+.background7 
+    border-radius: 8px
+    background-color: #FFF8DC
+.wrap-block-add-left__img
+    padding-top: 30px
+.block-add-left__img, .block-add__form-content
+    border: 2px solid #555
+.block-add-save
+    padding-top: 20px
+.topping1
+    background-color: #518bb7
+.topping2
+    background-color: #b5c568
+.topping3
+    background-color: #f464ab
+.topping
+    &::-webkit-input-placeholder
+        color: white
+    input
+        color: white
+    border-radius: 8px
+
+
    
 
 
