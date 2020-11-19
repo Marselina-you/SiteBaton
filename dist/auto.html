@@ -1,0 +1,34 @@
+<tr>
+<td class='admin_table__cell'>".$info['name_rus']."</td>
+<td class='admin_table__cell'>".$info['name']."</td>
+<td class='admin_table__cell'>".$info['value']."</td>
+<td class='admin_table__cell'>".$info['description']."</td>
+<td class='admin_table__cell'>".$info['short_description']."</td>
+<td class='admin_table__cell'>".$info['calories']."</td>
+<td class='admin_table__cell'>".$info['life']."</td>
+<td class='admin_table__cell'>".$info['nal']."</td>
+<td class='admin_table__cell'>".$info['country']."</td>
+<td class='admin_table__cell'>".$info['foto']."</td>
+<td class='admin_table__cell my_href'><a href=''>удалить</a></td>
+</tr> 
+
+<form enctype="multipart/form-data" method="post" class="forma" action="admin2.php">
+      <input type="hidden" name="MAX_FILE_SIZE" value="" /><tr>
+      <td class="admin_table__cell" bgcolor="#f2bff3"><input type="text" class="backgraund no_border input_name_rus" name="name_rus"  id="name_rus"/></td>
+      <td class="admin_table__cell" bgcolor="#f2bff3"><input type="text" class="backgraund no_border input_names" name="names"  /></td>
+      <td class="admin_table__cell" bgcolor="#f2bff3"><input class="input_width backgraund no_border" type="text"   name="value"  /></td>
+      <td class="admin_table__cell" bgcolor="#f2bff3"><textarea class="no_border backgraund no_border size_area" type="text" name="description"  /></textarea></td>
+       <td class="admin_table__cell" bgcolor="#f2bff3"><textarea class="backgraund no_border input_names" type="text" name="short_description"  /></textarea></td>
+      <td class="admin_table__cell no_padding" bgcolor="#f2bff3"><input class="input_width_2 backgraund no_border" type="text" name="calories"  /></td>
+      <td class="admin_table__cell no_padding" bgcolor="#f2bff3"><input class="input_width_2 backgraund no_border" type="text" name="life"  /></td>
+      <td class="admin_table__cell" bgcolor="#f2bff3">
+      <select name="nal" class="input_names">
+  <option>в наличии</option>
+  <option>нет в наличии</option>
+</select ></td>
+<td class="admin_table__cell no_padding" bgcolor="#f2bff3"><input class="input_width backgraund no_border" type="text" name="country" id="country"/></td>
+      <td class="admin_table__cell" bgcolor="#f2bff3">
+        <input class="hidden" type="file" name="new_picture" multiple/>
+      </td>
+      <td class="admin_table__cell" bgcolor="#f2bff3"></td>
+      </tr>  </table><input type="submit" value="Сохранить" name="submit" /></form>
