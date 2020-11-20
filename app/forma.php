@@ -56,19 +56,22 @@ require_once('appvars.php');
           if (!empty($new_picture)&&!empty($types)&&!empty($name)&&!empty($description)&&!empty($ingredient1)&&!empty($ingredient2)&&!empty($ingredient3)&&!empty($value)&&!empty($nal)&&!empty($slogan)&&!empty($t1)&&!empty($t2)&&!empty($t3)) {
             $query = "INSERT INTO ass (foto, types, name, description, ingredient1, ingredient2, ingredient3, value, nal, slogan, t1, t2, t3 ) VALUES ('$new_picture',  '$types', '$name', '$description', '$ingredient1', '$ingredient2',  '$ingredient3', '$value', '$nal', '$slogan', '$t1', '$t2', '$t3')";
                
-                echo'<html><head><title>Главная страница</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/app.min.css"><link rel="stylesheet" href="css/app.min.css"></head><body><div class="container-fluid"><div class="d-flex justify-content-center"><div class="lightbrowncolor size45px fontTahoma font-weight-bold text-center justify-content-center">'  .$types. '</div></div>';
-                echo'<div class=""><img src="' . MM_UPLOADPATH . $new_picture . '"  alt="Profile Picture" /></div>';
-                 echo'<div class="bardcolor fontSegoeScript size35px">'  .$name. '</div>';
-                  echo'<div class="darkbrowncolor fontSegoeScript size20px">'  .$description. '</div>';
-                   echo'<div class="darkbrowncolor size20px fontSegoeScript">'  .$ingredient1. '</div>';
-                    echo'<div class="darkbrowncolor size20px fontSegoeScript">'  .$ingredient2. '</div>';
-                     echo'<div class="darkbrowncolor size20px fontSegoeScript">'  .$ingredient3. '</div>';
-                      echo'<div class="darkbrowncolor size20px fontTahoma">'  .$value. '</div>';
-                       echo'<div class="darkbrowncolor size20px">'  .$nal. '</div>';
-                       echo'<div class="lightbrowncolor size35px fontSegoeScript">'  .$slogan. '</div>';
-                        echo'<div class="size20px fontTahoma">'  .$t1. '</div>';
-                         echo'<div class="size20px fontTahoma">'  .$t2. '</div>';
-                          echo'<div class="size20px fontTahoma">'  .$t3. '</div></div></body></html>';
+                echo'<html><head><title>Главная страница</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="css/bootstrap.css"><link rel="stylesheet" href="css/app.min.css"></head><body><div class="container-fluid">
+    <div class="d-flex justify-content-center">
+      <div class="lightbrowncolor size45px fontTahoma font-weight-bold col-lg-6 justify-content-center d-flex padding-15">'  .$types. '</div></div>';
+                echo'<div class="block-left-right d-flex"><div class="block-left col-xl-6 col-lg-5 col-md-4 col-sm-4 col-xs-4 flex-column"><div class="d-flex justify-content-center block-left__img"><img src="' . MM_UPLOADPATH . $new_picture . '"  alt="Profile Picture" /></div>';
+                echo'<div class="d-flex justify-content-center"><div class="darkbrowncolor size20px fontTahoma padding-15">'  .$value. '</div></div>';
+                       echo'<div class="d-flex justify-content-center"><div class="darkbrowncolor fontTahoma size20px">'  .$nal. '</div></div></div>';
+                 echo'<div class="block-right col-xl-6 col-lg-7 col-md-8 col-sm-8 col-xs-8 d-flex flex-column"><div class="block-right-content d-flex flex-column"><div class="bardcolor fontSegoeScript size35px">'  .$name. '</div>';
+                  echo'<div class="bardcolor size29px fontTahoma padding-15">+ Описание</div><div class="col-lg-9 darkbrowncolor fontSegoeScript size20px">'  .$description. '</div>';
+                   echo'<div class="bardcolor size29px fontTahoma padding-15">+ основные ингредиенты</div><div class="col-lg-9 darkbrowncolor size20px fontSegoeScript">'  .$ingredient1. '</div>';
+                    echo'<div class="col-lg-9 darkbrowncolor size20px fontSegoeScript">'  .$ingredient2. '</div>';
+                     echo'<div class="col-lg-9 darkbrowncolor size20px fontSegoeScript">'  .$ingredient3. '</div>';
+                      
+                       echo'<div class="lightbrowncolor size35px fontSegoeScript padding-15">'  .$slogan. '</div></div>';
+                        echo'<div class="block-right-ellips col-xl-12 col-lg-12"><div class="d-flex"><div class="toppig_view toppig_view1 whitecolor size24px fontTahoma">'  .$t1. '</div></div>';
+                         echo' <div class="d-flex"><div class="toppig_view toppig_view2 whitecolor size24px fontTahoma">'  .$t2. '</div></div>';
+                          echo' <div class="d-flex"><div class="toppig_view toppig_view3 whitecolor size24px fontTahoma">'  .$t3. '</div></div></div></div></div><a href="forma.html">продолжить заполнять</a></div></body></html>';
 
 
 
