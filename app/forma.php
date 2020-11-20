@@ -56,19 +56,19 @@ require_once('appvars.php');
           if (!empty($new_picture)&&!empty($types)&&!empty($name)&&!empty($description)&&!empty($ingredient1)&&!empty($ingredient2)&&!empty($ingredient3)&&!empty($value)&&!empty($nal)&&!empty($slogan)&&!empty($t1)&&!empty($t2)&&!empty($t3)) {
             $query = "INSERT INTO ass (foto, types, name, description, ingredient1, ingredient2, ingredient3, value, nal, slogan, t1, t2, t3 ) VALUES ('$new_picture',  '$types', '$name', '$description', '$ingredient1', '$ingredient2',  '$ingredient3', '$value', '$nal', '$slogan', '$t1', '$t2', '$t3')";
                
-                echo'<html><head><title>Главная страница</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/app.min.css"><link rel="stylesheet" href="css/app.min.css"></head><body><div class=""><div class=""><img src="' . MM_UPLOADPATH . $new_picture . '"  alt="Profile Picture" /></div>';
-                echo'<div class="lightbrowncolor size26px fontTahoma font-weight-bold">'  .$types. '</div>';
-                 echo'<div class="bardcolor fontSegoeScript size22px">'  .$name. '</div>';
-                  echo'<div class="darkbrowncolor fontSegoeScript">'  .$description. '</div>';
-                   echo'<div class="">'  .$ingredient1. '</div>';
-                    echo'<div class="">'  .$ingredient2. '</div>';
-                     echo'<div class="">'  .$ingredient3. '</div>';
-                      echo'<div class="">'  .$value. '</div>';
-                       echo'<div class="">'  .$nal. '</div>';
-                       echo'<div class="">'  .$slogan. '</div>';
-                        echo'<div class="">'  .$t1. '</div>';
-                         echo'<div class="">'  .$t2. '</div>';
-                          echo'<div class="">'  .$t3. '</div></div></body></html>';
+                echo'<html><head><title>Главная страница</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/app.min.css"><link rel="stylesheet" href="css/app.min.css"></head><body><div class="container-fluid"><div class="d-flex justify-content-center"><div class="lightbrowncolor size45px fontTahoma font-weight-bold text-center justify-content-center">'  .$types. '</div></div>';
+                echo'<div class=""><img src="' . MM_UPLOADPATH . $new_picture . '"  alt="Profile Picture" /></div>';
+                 echo'<div class="bardcolor fontSegoeScript size35px">'  .$name. '</div>';
+                  echo'<div class="darkbrowncolor fontSegoeScript size20px">'  .$description. '</div>';
+                   echo'<div class="darkbrowncolor size20px fontSegoeScript">'  .$ingredient1. '</div>';
+                    echo'<div class="darkbrowncolor size20px fontSegoeScript">'  .$ingredient2. '</div>';
+                     echo'<div class="darkbrowncolor size20px fontSegoeScript">'  .$ingredient3. '</div>';
+                      echo'<div class="darkbrowncolor size20px fontTahoma">'  .$value. '</div>';
+                       echo'<div class="darkbrowncolor size20px">'  .$nal. '</div>';
+                       echo'<div class="lightbrowncolor size35px fontSegoeScript">'  .$slogan. '</div>';
+                        echo'<div class="size20px fontTahoma">'  .$t1. '</div>';
+                         echo'<div class="size20px fontTahoma">'  .$t2. '</div>';
+                          echo'<div class="size20px fontTahoma">'  .$t3. '</div></div></body></html>';
 
 
 
