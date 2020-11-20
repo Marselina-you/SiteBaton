@@ -3,7 +3,7 @@
 require_once('appvars.php');
   $dbc = mysqli_connect('localhost','root','root','zabatonom');
     if (isset($_POST['submit'])) {
-      
+
       $types = $_POST['types'];
       $name= $_POST['name'];
       $description = $_POST['description'];
@@ -16,7 +16,7 @@ require_once('appvars.php');
       $t1 = $_POST['t1'];
       $t2 = $_POST['t2'];
       $t3 = $_POST['t3'];
-     
+
       $new_picture = mysqli_real_escape_string($dbc, trim($_FILES['new_picture']['name']));
       $new_picture_type = $_FILES['new_picture']['type'];
       $new_picture_size = $_FILES['new_picture']['size']; 
@@ -55,11 +55,11 @@ require_once('appvars.php');
         // Установите столбец картинка только в том случае, если есть новая картинка
           if (!empty($new_picture)&&!empty($types)&&!empty($name)&&!empty($description)&&!empty($ingredient1)&&!empty($ingredient2)&&!empty($ingredient3)&&!empty($value)&&!empty($nal)&&!empty($slogan)&&!empty($t1)&&!empty($t2)&&!empty($t3)) {
             $query = "INSERT INTO ass (foto, types, name, description, ingredient1, ingredient2, ingredient3, value, nal, slogan, t1, t2, t3 ) VALUES ('$new_picture',  '$types', '$name', '$description', '$ingredient1', '$ingredient2',  '$ingredient3', '$value', '$nal', '$slogan', '$t1', '$t2', '$t3')";
-               echo'kukukuk';
-                echo'<img src="' . MM_UPLOADPATH . $new_picture . '"  alt="Profile Picture" />';
-                echo'<div class="">'  .$types. '</div>';
-                 echo'<div class="">'  .$name. '</div>';
-                  echo'<div class="">'  .$description. '</div>';
+               
+                echo'<html><head><title>Главная страница</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/app.min.css"><link rel="stylesheet" href="css/app.min.css"></head><body><div class=""><div class=""><img src="' . MM_UPLOADPATH . $new_picture . '"  alt="Profile Picture" /></div>';
+                echo'<div class="lightbrowncolor size26px fontTahoma font-weight-bold">'  .$types. '</div>';
+                 echo'<div class="bardcolor fontSegoeScript size22px">'  .$name. '</div>';
+                  echo'<div class="darkbrowncolor fontSegoeScript">'  .$description. '</div>';
                    echo'<div class="">'  .$ingredient1. '</div>';
                     echo'<div class="">'  .$ingredient2. '</div>';
                      echo'<div class="">'  .$ingredient3. '</div>';
@@ -68,10 +68,10 @@ require_once('appvars.php');
                        echo'<div class="">'  .$slogan. '</div>';
                         echo'<div class="">'  .$t1. '</div>';
                          echo'<div class="">'  .$t2. '</div>';
-                          echo'<div class="">'  .$t3. '</div>';
-                           
-                          
-              
+                          echo'<div class="">'  .$t3. '</div></div></body></html>';
+
+
+
           }
         mysqli_query($dbc, $query);
         mysqli_close($dbc);
