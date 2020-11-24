@@ -13,14 +13,14 @@ require_once('adminPanel.html');
 ?>
         <div class="container-fluid">
         <div class="block-add col-lg-12">
-            <form enctype="multipart/form-data" method="post" class="block-add__form col-lg-10 offset-lg-1 d-flex flex-column" action="forma.php">
+            <form enctype="multipart/form-data" method="post" class="block-add__form col-lg-12 d-flex flex-column" action="forma.php">
               <div class="block-add__form-content">
                 
                 
 <div class="block-add-left-right d-flex"> 
                 <div class="block-add-left d-flex flex-column align-items-center col-lg-6">
                 <div class="wrap-block-add-left__img">
-                  <div class="block-add-left__img d-flex justify-content-center"><img src="images/dest/pirog.png"  alt=""/></div></div>
+                  <div class="block-add-left__img d-flex justify-content-center col-lg-12"><img src="images/dest/pirog1.png" alt=""/></div></div>
                   <input type="hidden" name="MAX_FILE_SIZE" value="" />
                 <div class="block-add__label-input d-flex justify-content-center align-items-center"><label for="new_picture" class="block-add__label darkbrowncolor size20px fontTahoma padding-15">Фото</label> 
                     <input class="hidden" type="file" name="new_picture" multiple/></div></div>                 
