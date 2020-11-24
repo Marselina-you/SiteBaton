@@ -69,9 +69,9 @@ require_once('appvars.php');
                      echo'<div class="col-lg-9 darkbrowncolor size20px fontSegoeScript">'  .$ingredient3. '</div>';
                       
                        echo'<div class="lightbrowncolor size35px fontSegoeScript padding-15">'  .$slogan. '</div></div>';
-                        echo'<div class="block-right-ellips col-xl-12 col-lg-12"><div class="d-flex"><div class="toppig_view toppig_view1 whitecolor size24px fontTahoma">'  .$t1. '</div></div>';
-                         echo' <div class="d-flex"><div class="toppig_view toppig_view2 whitecolor size24px fontTahoma">'  .$t2. '</div></div>';
-                          echo' <div class="d-flex"><div class="toppig_view toppig_view3 whitecolor size24px fontTahoma">'  .$t3. '</div></div></div></div></div><a href="forma.html">продолжить заполнять</a></div></body></html>';
+                        echo'<div class="block-right-ellips col-xl-12 col-lg-12"><div class="d-flex"><div class="d-flex justify-content-center align-items-center toppig_view toppig_view1 whitecolor size24px fontTahoma">'  .$t1. '</div></div>';
+                         echo' <div class="d-flex"><div class="d-flex justify-content-center align-items-center toppig_view toppig_view2 whitecolor size24px fontTahoma">'  .$t2. '</div></div>';
+                          echo' <div class="d-flex"><div class="d-flex justify-content-center align-items-center toppig_view toppig_view3 whitecolor size24px fontTahoma">'  .$t3. '</div></div></div></div></div><a href="forma.html">продолжить заполнять</a></div></body></html>';
 
 
 

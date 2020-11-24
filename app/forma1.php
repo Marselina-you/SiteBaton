@@ -1,6 +1,4 @@
-<?php
-require_once('adminPanel.html');
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Главная страница</title>
@@ -10,6 +8,9 @@ require_once('adminPanel.html');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
     <body>
+        <?php
+require_once('adminPanel.html');
+?>
         <div class="container-fluid">
         <div class="block-add col-lg-12">
             <form enctype="multipart/form-data" method="post" class="block-add__form col-lg-10 offset-lg-1 d-flex flex-column" action="forma.php">
@@ -77,5 +78,8 @@ require_once('adminPanel.html');
                 <div class="block-add-save__submit col-lg-2"><input type="submit" value="Сохранить" name="submit" class="btn btn-dark size35px"/></div></div></form>
           </div>
     </div>
+    <?php
+require_once('footer.html');
+?>
     </body>
 </html>
