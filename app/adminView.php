@@ -17,7 +17,12 @@
  $select = $son->query("SELECT  id, foto, name, description, ingredient1, ingredient2, ingredient3, value, nal, slogan, t1, t2, t3  FROM ass WHERE types = 'черный хлеб' LIMIT 180");
  $select1 = $son->query("SELECT  id, foto, name, description, ingredient1, ingredient2, ingredient3, value, nal, slogan, t1, t2, t3  FROM ass WHERE types = 'пирожные' LIMIT 180");
  $select2 = $son->query("SELECT  foto, name, description, ingredient1, ingredient2, ingredient3, value, nal, slogan, t1, t2, t3  FROM ass WHERE types = 'белая выпечка' LIMIT 180");
- 
+$deletes = $son->query("DELETE FROM ass WHERE id = '" . $_GET['id'] . "'");
+if ($deletes) {
+                    echo "Успешное удаление";
+                } else {
+                    echo "ошибка.";
+                } 
  
 	?>
 	<div class="container-fluid assortiment-container">
@@ -44,7 +49,7 @@
 				echo'<div class="d-flex toppig_view__admin2  whitecolor size16px fontTahoma justify-content-center align-items-center">'.$info['t2'].'</div>';
                 echo'<div class="d-flex justify-content-center align-items-center toppig_view__admin3 whitecolor size16px fontTahoma">' .$info['t3']. '</div>
 			</div>
-			<div class="d-flex padding-15"><div class="col-lg-6"><a href="delete.php?id=' . $info['id'] . '">delete</a>
+			<div class="d-flex padding-15"><div class="col-lg-6"><a href="adminView.php?id=' . $info['id'] . '">delete</a>
 			</div><div class="col-lg-6">';
 				
 			echo'</div></div>

@@ -1,6 +1,7 @@
 <?php
 
 require_once('appvars.php');
+require_once('adminPanel.html');
   $dbc = mysqli_connect('localhost','root','root','zabatonom');
     if (isset($_POST['submit'])) {
 
