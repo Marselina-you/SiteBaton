@@ -25,8 +25,8 @@ if ($deletes) {
                 } 
  
 	?>
-	<div class="container-fluid assortiment-container">
-		<div class="assortiment-types d-flex col-lg-12">
+	<div class="container-fluid assortiment-container d-flex">
+		
 		<div class="assortiment-types__item col-lg-4 text-center"><div class="assortiment-types__name fontTahoma size26px darkbrowncolor padding-15">ЧЕРНЫЙ ХЛЕБ</div><?php
 		 while($info = $select->fetch_array()){
     	
@@ -50,7 +50,7 @@ if ($deletes) {
                 echo'<div class="d-flex justify-content-center align-items-center toppig_view__admin3 whitecolor size16px fontTahoma">' .$info['t3']. '</div>
 			</div>
 			<div class="d-flex padding-15"><div class="col-lg-6"><a href="adminView.php?id=' . $info['id'] . '">delete</a>
-			</div><div class="col-lg-6">';
+			</div>';
 				
 			echo'</div></div>
 		</div>
@@ -58,7 +58,7 @@ if ($deletes) {
 	}
 
 		
-	?></div>
+	?>
 		<div class="assortiment-types__item col-lg-4 text-center"><div class="assortiment-types__name fontTahoma size26px darkbrowncolor padding-15">ПИРОЖНЫЕ</div><?php
 		 while($info = $select1->fetch_array()){
     	
