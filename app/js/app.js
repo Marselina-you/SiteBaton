@@ -4,7 +4,7 @@ var main = function() { //главная функция
     $('.page-title-header__menu').click(function() { /* выбираем класс icon-menu и
                добавляем метод click с функцией, вызываемой при клике */
 
-        $('.menu').animate({ //выбираем класс menu и метод animate
+        $('.wrap-menu').animate({ //выбираем класс menu и метод animate
 
             right: '0px' /* теперь при клике по иконке, меню, скрытое за
                левой границей на 285px, изменит свое положение на 0px и станет видимым */
@@ -24,7 +24,7 @@ var main = function() { //главная функция
 
     $('.icon-close').click(function() { //выбираем класс icon-close и метод click
 
-        $('.menu').animate({ //выбираем класс menu и метод animate
+        $('.wrap-menu').animate({ //выбираем класс menu и метод animate
 
             right: '-305px' /* при клике на крестик меню вернется назад в свое
                положение и скроется */

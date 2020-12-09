@@ -1,0 +1,59 @@
+.menu
+    position: fixed
+    top: 0px
+    
+    width:  305px
+    height: 100%
+    background-color: #72161b
+    text-align: center
+    opacity: .9
+    ul
+        list-style: none 
+        padding-top: 200px
+        line-height: 70px
+        li 
+            display: inline-block
+            /* style */
+.menu a
+    color: #fff
+    font-size: 35px
+    text-decoration: none
+    text-transform: uppercase
+ul.submenu 
+    display: none
+    font-size: 15px
+    padding: 0
+
+.menu
+    a:hover  
+        color: pink
+        cursor: pointer
+.menu                           
+    a:hover .submenu
+        display: block
+        
+.icon-close
+    width: max-content
+    padding: 5px
+    margin-left: 250px
+    cursor: pointer
+
+ul.submenu > li  
+    display: block
+
+ul.submenu > li > a 
+    display: block
+    text-decoration: none
+    padding: 0
+    font-size: 15px
+ul.submenu > li > a:hover 
+    text-decoration: none
+    color: #555
+    cursor: pointer
+ul.menu
+    li 
+        a:hover > ul.submenu
+            display: block  
+            text-decoration: none
+            color: pink
+            cursor: pointer
