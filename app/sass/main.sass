@@ -63,6 +63,8 @@ h3
     font-size: 1.5em
     @media screen and (max-width: 1200px)
         font-size: 1.25em
+   
+        
 .size20px
     font-size: 1.25em
 .size16px
@@ -87,23 +89,41 @@ h3
 	padding: 5px
 //page
 .container-page-title
-	padding: 0
-	height: 760px
-	background: url(/images/head_fon.png) no-repeat
-    width: 100%
+    background: url(../images/dest/head_fon.png) no-repeat
+    height: 756px
+    padding: 0
+    @media screen and (max-width: 1200px)
+        background: url(../images/dest/fon-1200.png) no-repeat
+    @media screen and (max-width: 992px)
+        background: url(../images/dest/mdfon.png) no-repeat
+    @media screen and (max-width: 768px)
+        background: url(../images/dest/planshetfon.png) no-repeat
+    @media screen and (max-width: 584px)
+        background: url(../images/dest/mobilfon.png) no-repeat
 .wrap-page-title-header__logo
 	margin-top: 40px
     padding: 0
+.page-title-header__logo  img
+    @media screen and (max-width: 584px)
+        width: 100px
+
 .page-title-header__logo
 	padding: 0
 .wrap-page-title-header__menu
 	padding: 0
 .page-title-header__menu
+
 	background-color: #f17345ff
 	border: 7px solid #f17345ff
 	border-radius: 5px
 	padding: 0
 	width: max-content
+        @media screen and (max-width: 584px)
+            border-radius: 0
+    
+
+
+
 .page-title-header__logo
 	width: max-content
 .page-title-content__name
@@ -326,7 +346,7 @@ textarea
 .wrap-menu
     position: fixed
     top: 0px
-    right: -300px
+    right: -305px
     width:  305px
     height: 100%
     background-color: #72161b
